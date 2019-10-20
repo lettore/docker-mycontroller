@@ -26,9 +26,9 @@ COPY files/root/ /
 
 # fixes
 RUN	chmod +x /service/*/run
-
+VOLUME ["/conf"]
 # expose mqtt and web
-EXPOSE 1883/tcp 8443/tcp
+EXPOSE 1883/tcp 80/tcp
 
 # launch s6
 ENTRYPOINT ["/bin/s6-svscan","/service"]
