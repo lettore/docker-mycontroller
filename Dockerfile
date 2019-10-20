@@ -27,7 +27,7 @@ COPY files/root/ /
 # fixes
 RUN	chmod +x /service/*/run
 # mount config and backup folder
-VOLUME ["/usr/local/mycontroller/conf","/usr/local/backup"]
+VOLUME ["/usr/local/mycontroller","/usr/local/backup"]
 # expose mqtt and web
 EXPOSE 1883/tcp 80/tcp
 
